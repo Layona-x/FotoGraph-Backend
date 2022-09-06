@@ -14,8 +14,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const dbURL = process.env.db;
 mongoose
-  .connect(
-    "mongodb+srv://anya:orhan2357@cluster0.1p07r.mongodb.net/fileupload?retryWrites=true&w=majority",
+  .connect(dbURL,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then((result) => {
